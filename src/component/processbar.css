@@ -1,0 +1,136 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+}
+
+.process-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.process-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.progress-line {
+  position: absolute;
+  top: 25px;
+  left: 10%;
+  width: 80%;
+  height: 4px;
+  background-color: #e2e8f0;
+  z-index: 1;
+}
+
+.progress-line-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #3b82f6;
+  width: 0%;
+  transition: width 0.6s ease;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.step-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  border: 3px solid #e2e8f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #94a3b8;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.step-title {
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.step-description {
+  font-size: 14px;
+  color: #94a3b8;
+  text-align: center;
+  max-width: 150px;
+}
+
+.step.active .step-circle {
+  border-color: #3b82f6;
+  background-color: #3b82f6;
+  color: white;
+}
+
+.step.active .step-title {
+  color: #1e3a8a;
+}
+
+.step.completed .step-circle {
+  border-color: #3b82f6;
+  background-color: white;
+  color: #3b82f6;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.prev-btn {
+  background-color: #e2e8f0;
+  color: #64748b;
+}
+
+.prev-btn:hover {
+  background-color: #cbd5e1;
+}
+
+.next-btn {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.next-btn:hover {
+  background-color: #2563eb;
+}
+
+.prev-btn:disabled {
+  background-color: #f1f5f9;
+  color: #cbd5e1;
+  cursor: not-allowed;
+}
+
+.next-btn:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}
